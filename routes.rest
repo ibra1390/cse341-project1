@@ -1,1 +1,36 @@
 GET https://cse341-project1-kd18.onrender.com/contacts
+
+
+//LOCALHOST 
+### GET all users
+GET http://localhost:3000/contacts
+
+### GET contact by id
+GET http://localhost:3000/contacts/68686633438b0359615de656
+
+### CREATE contact
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Laura",
+    "lastName": "Gonzalez",
+    "email": "laura.gonzalez@gmail.com",
+    "favoriteColor": "pink",
+    "birthday": "1992-12-20"
+}
+
+### PUT contact
+PUT http://localhost:3000/contacts/68686633438b0359615de656 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Laura",
+    "lastName": "Gonzalez",
+    "email": "laura.gonzalez5@gmail.com",
+    "favoriteColor": "red",
+    "birthday": "1992-12-20"
+}
+
+### DELETE contact
+DELETE http://localhost:3000/contacts/68686633438b0359615de656 HTTP/1.1
